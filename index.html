@@ -10,6 +10,25 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
+// OTHER:
+// BRA ,0,0,0,0,3,0,0,2
+// CHI ,0,0,0,0,1,2,0,0
+// ENG2,3,1,0,0,0,0,0,0
+// TUR ,0,0,1,0,0,0,0,1
+// SCO ,1,0,0,0,0,1,0,0
+// CRO ,0,0,2,0,0,0,0,0
+// MEX ,0,0,0,0,0,0,0,2
+// URU ,0,0,0,0,0,0,0,2
+// POR ,0,0,0,0,0,0,0,2
+// DEN ,1,0,0,0,0,0,0,0
+// AUS ,0,0,1,0,0,0,0,0
+// UKR ,0,0,1,0,1,0,0,0
+// USA ,1,0,0,0,0,0,0,0
+// ARG ,0,0,0,0,0,0,0,3
+// UAE ,1,0,0,0,0,0,0,0
+// SWE ,1,0,0,0,0,0,0,0
+// SWE2,1,0,0,0,0,0,0,0
+
 var svg = d3.select("svg"),
     margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = +svg.attr("width") - margin.left - margin.right,
@@ -27,7 +46,7 @@ var y = d3.scaleLinear()
     .rangeRound([height, 0]);
 
 var z = d3.scaleOrdinal()
-    .range(["#FECC00", "#CF081F"]);
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", 'lightblue']);
 
 d3.csv("./data.csv", function(d, i, columns) {
   for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = +d[columns[i]];
