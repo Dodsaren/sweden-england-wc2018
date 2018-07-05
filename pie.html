@@ -22,7 +22,7 @@
  
   .y .tick line {
     stroke: #ddd;
-  }
+  }  
   </style>
 
 </head>
@@ -57,14 +57,14 @@ var svg = d3.select("body")
 // OTHER,9,1,5,0,5,3,0,12
 
 var data = [
-  { league: "ESP", swe:'1',eng:'0',cro:'4',rus:'1',bra:'5',bel:'2',fra:'6',uru:'5' },
-  { league: "ENG", swe:'1',eng:'22',cro:'1',rus:'0',bra:'6',bel:'11',fra:'7',uru:'0' },
-  { league: "GER", swe:'3',eng:'0',cro:'4',rus:'0',bra:'0',bel:'3',fra:'2',uru:'0' },
-  { league: "ITA", swe:'4',eng:'0',cro:'5',rus:'0',bra:'3',bel:'1',fra:'1',uru:'5' },
-  { league: "FRA", swe:'3',eng:'0',cro:'1',rus:'0',bra:'3',bel:'2',fra:'9',uru:'1' },
-  { league: "BEL", swe:'1',eng:'0',cro:'1',rus:'1',bra:'0',bel:'1',fra:'0',uru:'0' },
-  { league: "RUS", swe:'1',eng:'0',cro:'1',rus:'21',bra:'0',bel:'0',fra:'0',uru:'0' },
-  { league: "OTHER", swe:'9',eng:'1',cro:'5',rus:'0',bra:'5',bel:'3',fra:'0',uru:'12' },
+  { league: "La Liga", swe:'1',eng:'0',cro:'4',rus:'1',bra:'5',bel:'2',fra:'6',uru:'5' },
+  { league: "Premier League", swe:'1',eng:'22',cro:'1',rus:'0',bra:'6',bel:'11',fra:'7',uru:'0' },
+  { league: "Bundesliga", swe:'3',eng:'0',cro:'4',rus:'0',bra:'0',bel:'3',fra:'2',uru:'0' },
+  { league: "Serie A", swe:'4',eng:'0',cro:'5',rus:'0',bra:'3',bel:'1',fra:'1',uru:'5' },
+  { league: "Ligue 1", swe:'3',eng:'0',cro:'1',rus:'0',bra:'3',bel:'2',fra:'9',uru:'1' },
+  { league: "Jupiler League", swe:'1',eng:'0',cro:'1',rus:'1',bra:'0',bel:'1',fra:'0',uru:'0' },
+  { league: "Premjer-Liga", swe:'1',eng:'0',cro:'1',rus:'21',bra:'0',bel:'0',fra:'0',uru:'0' },
+  { league: "Other leagues", swe:'9',eng:'1',cro:'5',rus:'0',bra:'5',bel:'3',fra:'0',uru:'12' },
 ];
 
 
@@ -187,5 +187,50 @@ tooltip.append("text")
   .attr("font-weight", "bold");
 
 </script>
+<h2>Leagues represented and corresponding teams in the 2018 World Cup Quarter finals</h2>
+<p>Only leagues represented in 3 teams or more</p>
+<div>
+  <h4>The other leagues: </h4>
+  <ul>
+    <li>Campeonato Brasileiro Série A</li>
+    <li>China League One</li>
+    <li>EFL Championship</li>
+    <li>Süper Lig</li>
+    <li>Scottish Premiership</li>
+    <li>Prva HNL</li>
+    <li>Liga MX</li>
+    <li>Primera División de Uruguay</li>
+    <li>Primeira Liga</li>
+    <li>Superliga</li>
+    <li>Österreichische Fußball-Bundesliga</li>
+    <li>Premjer-liha</li>
+    <li>Major League Soccer</li>
+    <li>Primera División de Argentina</li>
+    <li>UAE Arabian Gulf League</li>
+    <li>Allsvenskan</li>
+    <li>Superettan</li>
+  </ul>
+</div>
+<!-- <div>
+  <ul>
+    <li><b>Campeonato Brasileiro Série A</b> (Brazil) 5 players</li>
+    <li><b>China League One</b> (China) 3 players</li>
+    <li><b>EFL Championship</b> (England 2) 4 players</li>
+    <li><b>Süper Lig</b> (Turkey) 2 players</li>
+    <li><b>Scottish Premiership</b> (Scotland) 2 players</li>
+    <li><b>Prva HNL</b> (Croatia) 2 players</li>
+    <li><b>Liga MX</b> (Mexico) 2 players</li>
+    <li><b>Primera División de Uruguay</b> (Uruguay) 2 players</li>
+    <li><b>Primeira Liga</b> (Portugal) 2 players</li>
+    <li><b>Superliga</b> (Denamrk) 1 player</li>
+    <li><b>Österreichische Fußball-Bundesliga</b> (Austria) 1 player</li>
+    <li><b>Premjer-liha</b> (Ukraine) 2 players</li>
+    <li><b>Major League Soccer</b> (USA) 1 player</li>
+    <li><b>Primera División de Argentina</b> (Argentina) 3 players</li>
+    <li><b>UAE Arabian Gulf League</b> (United Arab Emirates) 1 player</li>
+    <li><b>Allsvenskan</b> (Sweden) 1 player</li>
+    <li><b>Superettan</b> (Sweden 2) 1 player</li>
+  </ul>
+</div> -->
 </body>
 </html>
