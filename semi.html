@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>World cup quarter finals 2018</title>
+  <title>World cup semi finals 2018</title>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <style type="text/css">
   svg {
@@ -57,19 +57,17 @@ var svg = d3.select("body")
 // OTHER,9,1,5,0,5,3,0,12
 
 var data = [
-  { league: "La Liga", swe:'1',eng:'0',cro:'4',rus:'1',bra:'5',bel:'2',fra:'6',uru:'5' },
-  { league: "Premier League", swe:'1',eng:'22',cro:'1',rus:'0',bra:'6',bel:'11',fra:'7',uru:'0' },
-  { league: "Bundesliga", swe:'3',eng:'0',cro:'4',rus:'0',bra:'0',bel:'3',fra:'2',uru:'0' },
-  { league: "Serie A", swe:'4',eng:'0',cro:'5',rus:'0',bra:'3',bel:'1',fra:'1',uru:'5' },
-  { league: "Ligue 1", swe:'3',eng:'0',cro:'1',rus:'0',bra:'3',bel:'2',fra:'9',uru:'1' },
-  { league: "Jupiler League", swe:'1',eng:'0',cro:'1',rus:'1',bra:'0',bel:'1',fra:'0',uru:'0' },
-  { league: "Premjer-Liga", swe:'1',eng:'0',cro:'1',rus:'21',bra:'0',bel:'0',fra:'0',uru:'0' },
-  { league: "Other leagues", swe:'9',eng:'1',cro:'5',rus:'0',bra:'5',bel:'3',fra:'0',uru:'12' },
+  { league: "La Liga", eng:'0',cro:'4',bel:'2',fra:'6', },
+  { league: "Premier League", eng:'22',cro:'1',bel:'11',fra:'7', },
+  { league: "Bundesliga", eng:'0',cro:'4',bel:'3',fra:'2', },
+  { league: "Serie A", eng:'0',cro:'5',bel:'1',fra:'1', },
+  { league: "Ligue 1", eng:'0',cro:'1',bel:'2',fra:'9', },
+  { league: "Other leagues", eng:'1',cro:'7',bel:'4',fra:'0', },
 ];
 
 
 // Transpose the data into layers
-var dataset = d3.layout.stack()(["swe", "eng", "cro", "rus", "bra", "bel", "fra", "uru"].map(function(country) {
+var dataset = d3.layout.stack()(["eng", "cro", "bel", "fra"].map(function(country) {
   return data.map(function(d) {
     return {x: d.league, y: +d[country]};
   });
@@ -85,7 +83,7 @@ var y = d3.scale.linear()
   .domain([0, d3.max(dataset, function(d) {  return d3.max(d, function(d) { return d.y0 + d.y; });  })])
   .range([height, 0]);
 
-var colors = ["#fcc914", "#CF081F", "#0093bb", "#E5C685", "#009b3a", "black", "#013896", "#7B3F00"];
+var colors = ["#CF081F", "#0093bb", "black", "#013896",];
 
 
 // Define and draw axes
@@ -156,14 +154,10 @@ legend.append("text")
   .style("text-anchor", "start")
   .text(function(d, i) { 
     switch (i) {
-      case 0: return "Uruguay";
-      case 1: return "France";
-      case 2: return "Belgium";
-      case 3: return "Brazil";
-      case 4: return "Russia";
-      case 5: return "Croatia";
-      case 6: return "England";
-      case 7: return "Sweden";
+      case 0: return "France";
+      case 1: return "Belgium";
+      case 2: return "Croatia";
+      case 3: return "England";
     }
   });
 
@@ -187,29 +181,7 @@ tooltip.append("text")
   .attr("font-weight", "bold");
 
 </script>
-<h2>Leagues represented in the 2018 World Cup Quarter finals</h2>
-<p>Other leagues, only represented in 1 or 2 teams:</p>
-<div>
-  <ul>
-    <li>Campeonato Brasileiro Série A</li>
-    <li>China League One</li>
-    <li>EFL Championship</li>
-    <li>Süper Lig</li>
-    <li>Scottish Premiership</li>
-    <li>Prva HNL</li>
-    <li>Liga MX</li>
-    <li>Primera División de Uruguay</li>
-    <li>Primeira Liga</li>
-    <li>Superliga</li>
-    <li>Österreichische Fußball-Bundesliga</li>
-    <li>Premjer-liha</li>
-    <li>Major League Soccer</li>
-    <li>Primera División de Argentina</li>
-    <li>UAE Arabian Gulf League</li>
-    <li>Allsvenskan</li>
-    <li>Superettan</li>
-  </ul>
-</div>
+
 <!-- <div>
   <ul>
     <li><b>Campeonato Brasileiro Série A</b> (Brazil) 5 players</li>
